@@ -1,0 +1,29 @@
+<div class="field">
+  <div class="label-row">
+    <label [for]="inputId" class="label">
+      {{ label }}
+      @if (required) {
+        <span class="required" aria-hidden="true"> *</span>
+      }
+    </label>
+    @if (maxLength) {
+      <span class="counter">{{ value.length }}/{{ maxLength }}</span>
+    }
+  </div>
+  <textarea
+    [id]="inputId"
+    class="control"
+    [class.control-error]="error"
+    [value]="value"
+    [placeholder]="placeholder"
+    [rows]="rows"
+    [attr.maxlength]="maxLength ?? null"
+    (input)="handleInput($event)"
+    (blur)="blurred.emit()"
+    [attr.aria-invalid]="!!error"
+    [attr.aria-describedby]="error ? inputId + '-error' : null"
+  ></textarea>
+  @if (error) {
+    <p [id]="inputId + '-error'" class="error">{{ error }}</p>
+  }
+</div>

@@ -1,0 +1,81 @@
+@if (store.dashboardError() && !store.dashboardStats()) {
+  <app-empty-state
+    title="Couldn't load the dashboard"
+    [description]="store.dashboardError() ?? undefined"
+  >
+    <button type="button" class="btn btn-primary" (click)="retry()">Retry</button>
+  </app-empty-state>
+} @else if (!store.dashboardStats()) {
+  <div class="loading-wrap">
+    <app-loading-spinner
+      size="lg"
+      [label]="store.dashboardLoading() ? 'Loading dashboard…' : undefined"
+    />
+  </div>
+} @else {
+  <div class="page">
+    <header class="page-header">
+      <h1>Dashboard</h1>
+      <p>An overview of everything happening across your projects.</p>
+    </header>
+
+    <div class="cards">
+      <div class="summary-card primary">
+        <span class="summary-value">{{ store.dashboardStats()!.totalProjects }}</span>
+        <span class="summary-label">Total Projects</span>
+      </div>
+      <div class="summary-card neutral">
+        <span class="summary-value">{{ store.dashboardStats()!.totalTasks }}</span>
+        <span class="summary-label">Total Tasks</span>
+      </div>
+      <div class="summary-card success">
+        <span class="summary-value">{{ store.dashboardStats()!.completedTasks }}</span>
+        <span class="summary-label">Completed</span>
+      </div>
+      <div class="summary-card danger">
+        <span class="summary-value">{{ store.dashboardStats()!.overdueTasks }}</span>
+        <span class="summary-label">Overdue</span>
+      </div>
+    </div>
+
+    <div class="charts">
+      <section class="chart-card">
+        <h2 class="chart-title">Tasks by status</h2>
+        <div class="bar-list">
+          @for (status of TASK_STATUSES; track status) {
+            <div class="bar-row">
+              <span class="bar-label">{{ STATUS_LABELS[status] }}</span>
+              <div class="bar-track">
+                <div
+                  class="bar-fill"
+                  [class]="'status-' + status"
+                  [style.width.%]="statusWidth(status)"
+                ></div>
+              </div>
+              <span class="bar-value">{{ store.dashboardStats()!.byStatus[status] }}</span>
+            </div>
+          }
+        </div>
+      </section>
+
+      <section class="chart-card">
+        <h2 class="chart-title">Tasks by priority</h2>
+        <div class="bar-list">
+          @for (priority of TASK_PRIORITIES; track priority) {
+            <div class="bar-row">
+              <span class="bar-label">{{ PRIORITY_LABELS[priority] }}</span>
+              <div class="bar-track">
+                <div
+                  class="bar-fill"
+                  [class]="'priority-' + priority"
+                  [style.width.%]="priorityWidth(priority)"
+                ></div>
+              </div>
+              <span class="bar-value">{{ store.dashboardStats()!.byPriority[priority] }}</span>
+            </div>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+}

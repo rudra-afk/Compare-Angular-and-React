@@ -1,0 +1,65 @@
+@if (store.projectsError() && !store.projects()) {
+  <app-empty-state
+    title="Couldn't load projects"
+    [description]="store.projectsError() ?? undefined"
+  >
+    <button type="button" class="btn btn-primary" (click)="retry()">Retry</button>
+  </app-empty-state>
+} @else {
+  <div class="page">
+    <header class="page-header">
+      <div>
+        <h1>Projects</h1>
+        <p>
+          @if (store.projects()) {
+            {{ store.projects()!.length }} project{{ store.projects()!.length === 1 ? '' : 's' }}
+          } @else {
+            &nbsp;
+          }
+        </p>
+      </div>
+      <div class="sort-controls">
+        <span class="sort-label">Sort by</span>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.sort-active]="sortField() === 'name'"
+          (click)="toggleSort('name')"
+        >
+          Name @if (sortField() === 'name') { {{ sortDirection() === 'asc' ? '↑' : '↓' }} }
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.sort-active]="sortField() === 'taskCount'"
+          (click)="toggleSort('taskCount')"
+        >
+          Task count
+          @if (sortField() === 'taskCount') { {{ sortDirection() === 'asc' ? '↑' : '↓' }} }
+        </button>
+      </div>
+    </header>
+
+    @if (!store.projects() && store.projectsLoading()) {
+      <div class="grid">
+        @for (row of skeletonRows; track row) {
+          <div class="card skeleton-card">
+            <app-skeleton [rows]="3" [rowHeight]="16" />
+          </div>
+        }
+      </div>
+    }
+
+    @if (store.projects() && store.projects()!.length === 0) {
+      <app-empty-state title="No projects yet" description="Projects you create will show up here." />
+    }
+
+    @if (store.projects() && store.projects()!.length > 0) {
+      <div class="grid">
+        @for (project of sortedProjects; track project.id) {
+          <app-project-card [project]="project" />
+        }
+      </div>
+    }
+  </div>
+}

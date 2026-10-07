@@ -1,0 +1,24 @@
+{
+  "name": "measurement-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated, reproducible measurement suite comparing the react-prototype and angular-prototype builds on load time, rendering performance, memory usage, bundle size, LOC, and code complexity.",
+  "scripts": {
+    "measure": "node run-all.js",
+    "measure:static": "node src/static-metrics.js",
+    "measure:lighthouse": "node src/lighthouse-runner.js",
+    "measure:interaction": "node src/interaction-timing.js",
+    "measure:memory": "node src/memory-runner.js",
+    "measure:aggregate": "node src/aggregate-results.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0",
+    "lighthouse": "^12.0.0",
+    "serve-handler": "^6.1.6",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "cloc": "^2.2.0",
+    "chart.js": "^4.4.0"
+  }
+}

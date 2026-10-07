@@ -1,0 +1,3 @@
+app,method,totalFiles,totalCodeLines
+react,fallback-line-count,52,3126
+angular,fallback-line-count,74,3062

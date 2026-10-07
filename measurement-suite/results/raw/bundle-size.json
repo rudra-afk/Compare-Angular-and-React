@@ -1,0 +1,76 @@
+[
+  {
+    "app": "react",
+    "jsRawKB": 517.12,
+    "jsGzipKB": 116.77,
+    "cssRawKB": 22.06,
+    "cssGzipKB": 4.51,
+    "totalRawKB": 553.86,
+    "totalGzipKB": 125.1,
+    "fileCount": 5,
+    "files": [
+      {
+        "file": "assets\\index-Bibx91Ip.js",
+        "bytesRaw": 529530,
+        "bytesGzip": 119569
+      },
+      {
+        "file": "assets\\index-BTAexyjX.css",
+        "bytesRaw": 22592,
+        "bytesGzip": 4622
+      },
+      {
+        "file": "favicon.svg",
+        "bytesRaw": 9522,
+        "bytesGzip": 1490
+      },
+      {
+        "file": "icons.svg",
+        "bytesRaw": 5031,
+        "bytesGzip": 2104
+      },
+      {
+        "file": "index.html",
+        "bytesRaw": 478,
+        "bytesGzip": 313
+      }
+    ]
+  },
+  {
+    "app": "angular",
+    "jsRawKB": 570.41,
+    "jsGzipKB": 129.47,
+    "cssRawKB": 5.58,
+    "cssGzipKB": 1.83,
+    "totalRawKB": 594.3,
+    "totalGzipKB": 136.92,
+    "fileCount": 5,
+    "files": [
+      {
+        "file": "favicon.ico",
+        "bytesRaw": 15086,
+        "bytesGzip": 4250
+      },
+      {
+        "file": "index.html",
+        "bytesRaw": 3672,
+        "bytesGzip": 1503
+      },
+      {
+        "file": "main-GEADBHW5.js",
+        "bytesRaw": 549510,
+        "bytesGzip": 120107
+      },
+      {
+        "file": "polyfills-5CFQRCPP.js",
+        "bytesRaw": 34585,
+        "bytesGzip": 12470
+      },
+      {
+        "file": "styles-IXKT7RHU.css",
+        "bytesRaw": 5715,
+        "bytesGzip": 1877
+      }
+    ]
+  }
+]

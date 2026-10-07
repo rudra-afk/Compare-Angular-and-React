@@ -1,0 +1,54 @@
+[
+  {
+    "app": "react",
+    "method": "fallback-line-count",
+    "totalFiles": 52,
+    "totalCodeLines": 3126,
+    "byLanguage": {
+      "TS": {
+        "files": 10,
+        "blank": 0,
+        "comment": 0,
+        "code": 503
+      },
+      "TSX": {
+        "files": 22,
+        "blank": 0,
+        "comment": 0,
+        "code": 1500
+      },
+      "CSS": {
+        "files": 20,
+        "blank": 0,
+        "comment": 0,
+        "code": 1123
+      }
+    }
+  },
+  {
+    "app": "angular",
+    "method": "fallback-line-count",
+    "totalFiles": 74,
+    "totalCodeLines": 3062,
+    "byLanguage": {
+      "TS": {
+        "files": 33,
+        "blank": 0,
+        "comment": 0,
+        "code": 1294
+      },
+      "CSS": {
+        "files": 21,
+        "blank": 0,
+        "comment": 0,
+        "code": 1127
+      },
+      "HTML": {
+        "files": 20,
+        "blank": 0,
+        "comment": 0,
+        "code": 641
+      }
+    }
+  }
+]

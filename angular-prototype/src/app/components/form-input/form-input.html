@@ -1,0 +1,23 @@
+<div class="field">
+  <label [for]="inputId" class="label">
+    {{ label }}
+    @if (required) {
+      <span class="required" aria-hidden="true"> *</span>
+    }
+  </label>
+  <input
+    [id]="inputId"
+    [type]="type"
+    class="control"
+    [class.control-error]="error"
+    [value]="value"
+    [placeholder]="placeholder"
+    (input)="handleInput($event)"
+    (blur)="blurred.emit()"
+    [attr.aria-invalid]="!!error"
+    [attr.aria-describedby]="error ? inputId + '-error' : null"
+  />
+  @if (error) {
+    <p [id]="inputId + '-error'" class="error">{{ error }}</p>
+  }
+</div>

@@ -1,0 +1,86 @@
+{
+  "react": [
+    {
+      "run": 1,
+      "fcp": 3660,
+      "lcp": 3810,
+      "tti": 3810,
+      "tbt": 0,
+      "performanceScore": 80
+    },
+    {
+      "run": 2,
+      "fcp": 3660,
+      "lcp": 3810,
+      "tti": 3810,
+      "tbt": 0,
+      "performanceScore": 80
+    },
+    {
+      "run": 3,
+      "fcp": 3601,
+      "lcp": 3751,
+      "tti": 3751,
+      "tbt": 0,
+      "performanceScore": 81
+    },
+    {
+      "run": 4,
+      "fcp": 3451,
+      "lcp": 3601,
+      "tti": 3601,
+      "tbt": 0,
+      "performanceScore": 83
+    },
+    {
+      "run": 5,
+      "fcp": 3660,
+      "lcp": 3810,
+      "tti": 3810,
+      "tbt": 0,
+      "performanceScore": 80
+    }
+  ],
+  "angular": [
+    {
+      "run": 1,
+      "fcp": 3750,
+      "lcp": 4050,
+      "tti": 4107,
+      "tbt": 27,
+      "performanceScore": 78
+    },
+    {
+      "run": 2,
+      "fcp": 3750,
+      "lcp": 4050,
+      "tti": 4100,
+      "tbt": 20,
+      "performanceScore": 78
+    },
+    {
+      "run": 3,
+      "fcp": 3751,
+      "lcp": 4051,
+      "tti": 4099,
+      "tbt": 19,
+      "performanceScore": 78
+    },
+    {
+      "run": 4,
+      "fcp": 3751,
+      "lcp": 4051,
+      "tti": 4100,
+      "tbt": 20,
+      "performanceScore": 78
+    },
+    {
+      "run": 5,
+      "fcp": 3750,
+      "lcp": 4050,
+      "tti": 4102,
+      "tbt": 22,
+      "performanceScore": 78
+    }
+  ]
+}

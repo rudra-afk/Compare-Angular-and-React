@@ -1,0 +1,119 @@
+@if (store.currentProjectNotFound()) {
+} @else if (store.currentProjectError() && !store.currentProject()) {
+  <app-empty-state
+    title="Couldn't load this project"
+    [description]="store.currentProjectError() ?? undefined"
+  >
+    <button type="button" class="btn btn-primary" (click)="retryProject()">Retry</button>
+  </app-empty-state>
+} @else if (!store.currentProject()) {
+  <div class="loading-wrap">
+    <app-loading-spinner
+      size="lg"
+      [label]="store.currentProjectLoading() ? 'Loading project…' : undefined"
+    />
+  </div>
+} @else if (taskNotFound()) {
+  <app-empty-state
+    title="Task not found"
+    description="This task may have been deleted, or the link is incorrect."
+  >
+    <button type="button" class="btn btn-primary" (click)="goToProject()">Back to project</button>
+  </app-empty-state>
+} @else if (taskLoadError()) {
+  <app-empty-state title="Couldn't load this task" [description]="taskLoadError() ?? undefined">
+    <button type="button" class="btn btn-primary" (click)="retryLoadTask()">Retry</button>
+  </app-empty-state>
+} @else if (taskLoading()) {
+  <div class="loading-wrap">
+    <app-loading-spinner size="lg" label="Loading task…" />
+  </div>
+} @else {
+  <div class="page">
+    <h1>{{ mode === 'create' ? 'New Task' : 'Edit Task' }}</h1>
+    <p class="subtitle">Project: {{ store.currentProject()!.name }}</p>
+
+    <form class="form" (submit)="handleSubmit($event)" novalidate>
+      <app-form-input
+        inputId="title"
+        label="Title"
+        [required]="true"
+        [value]="draft().title"
+        (valueChange)="setTitle($event)"
+        (blurred)="markTouched('title')"
+        [error]="fieldError('title')"
+        placeholder="e.g. Fix login flow"
+      />
+      <app-form-textarea
+        inputId="description"
+        label="Description"
+        [value]="draft().description"
+        (valueChange)="setDescription($event)"
+        (blurred)="markTouched('description')"
+        [error]="fieldError('description')"
+        [maxLength]="500"
+        placeholder="Optional details…"
+      />
+      <div class="row">
+        <app-form-select
+          inputId="status"
+          label="Status"
+          [required]="true"
+          [value]="draft().status"
+          (valueChange)="setStatus($event)"
+          (blurred)="markTouched('status')"
+          [error]="fieldError('status')"
+          [options]="statusOptions"
+        />
+        <app-form-select
+          inputId="priority"
+          label="Priority"
+          [required]="true"
+          [value]="draft().priority"
+          (valueChange)="setPriority($event)"
+          (blurred)="markTouched('priority')"
+          [error]="fieldError('priority')"
+          [options]="priorityOptions"
+        />
+      </div>
+      <app-form-input
+        inputId="dueDate"
+        label="Due date"
+        type="date"
+        [required]="true"
+        [value]="draft().dueDate"
+        (valueChange)="setDueDate($event)"
+        (blurred)="markTouched('dueDate')"
+        [error]="fieldError('dueDate')"
+      />
+
+      @if (store.taskMutation().status === 'error') {
+        <p class="form-error">{{ store.taskMutation().error }}</p>
+      }
+
+      <div class="actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="goToProject()"
+          [disabled]="store.taskMutation().status === 'saving'"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="isInvalid || store.taskMutation().status === 'saving'"
+        >
+          {{
+            store.taskMutation().status === 'saving'
+              ? 'Saving…'
+              : mode === 'create'
+                ? 'Create Task'
+                : 'Save Changes'
+          }}
+        </button>
+      </div>
+    </form>
+  </div>
+}

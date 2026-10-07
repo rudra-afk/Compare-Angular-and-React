@@ -1,0 +1,54 @@
+{
+  "react": [
+    {
+      "run": 1,
+      "beforeTaskListMB": 2.06,
+      "afterTaskListMB": 2.87,
+      "taskListDeltaMB": 0.81,
+      "afterInteractionsMB": 2.91,
+      "interactionsDeltaMB": 0.04
+    },
+    {
+      "run": 2,
+      "beforeTaskListMB": 2.06,
+      "afterTaskListMB": 2.87,
+      "taskListDeltaMB": 0.81,
+      "afterInteractionsMB": 2.91,
+      "interactionsDeltaMB": 0.04
+    },
+    {
+      "run": 3,
+      "beforeTaskListMB": 2.06,
+      "afterTaskListMB": 2.89,
+      "taskListDeltaMB": 0.83,
+      "afterInteractionsMB": 2.94,
+      "interactionsDeltaMB": 0.05
+    }
+  ],
+  "angular": [
+    {
+      "run": 1,
+      "beforeTaskListMB": 3.36,
+      "afterTaskListMB": 4.31,
+      "taskListDeltaMB": 0.96,
+      "afterInteractionsMB": 4.19,
+      "interactionsDeltaMB": -0.12
+    },
+    {
+      "run": 2,
+      "beforeTaskListMB": 3.36,
+      "afterTaskListMB": 4.31,
+      "taskListDeltaMB": 0.95,
+      "afterInteractionsMB": 4.19,
+      "interactionsDeltaMB": -0.12
+    },
+    {
+      "run": 3,
+      "beforeTaskListMB": 3.36,
+      "afterTaskListMB": 4.31,
+      "taskListDeltaMB": 0.95,
+      "afterInteractionsMB": 4.19,
+      "interactionsDeltaMB": -0.12
+    }
+  ]
+}

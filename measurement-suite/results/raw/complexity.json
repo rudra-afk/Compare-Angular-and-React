@@ -1,0 +1,354 @@
+[
+  {
+    "app": "react",
+    "functionCount": 175,
+    "avgComplexity": 2.17,
+    "maxComplexity": 27,
+    "perFile": [
+      {
+        "file": "api\\config.ts",
+        "functions": 7,
+        "avgComplexity": 1.14,
+        "maxComplexity": 2
+      },
+      {
+        "file": "api\\db.ts",
+        "functions": 9,
+        "avgComplexity": 1.11,
+        "maxComplexity": 2
+      },
+      {
+        "file": "api\\errors.ts",
+        "functions": 1,
+        "avgComplexity": 2,
+        "maxComplexity": 2
+      },
+      {
+        "file": "api\\mockApi.ts",
+        "functions": 20,
+        "avgComplexity": 1.3,
+        "maxComplexity": 4
+      },
+      {
+        "file": "App.tsx",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "components\\AppShell\\AppShell.tsx",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "components\\ConfirmDialog\\ConfirmDialog.tsx",
+        "functions": 5,
+        "avgComplexity": 3.2,
+        "maxComplexity": 9
+      },
+      {
+        "file": "components\\EmptyState\\EmptyState.tsx",
+        "functions": 1,
+        "avgComplexity": 3,
+        "maxComplexity": 3
+      },
+      {
+        "file": "components\\ErrorBoundary\\ErrorBoundary.tsx",
+        "functions": 6,
+        "avgComplexity": 1.17,
+        "maxComplexity": 2
+      },
+      {
+        "file": "components\\FormInput\\FormInput.tsx",
+        "functions": 2,
+        "avgComplexity": 3.5,
+        "maxComplexity": 6
+      },
+      {
+        "file": "components\\FormSelect\\FormSelect.tsx",
+        "functions": 3,
+        "avgComplexity": 2.33,
+        "maxComplexity": 5
+      },
+      {
+        "file": "components\\FormTextarea\\FormTextarea.tsx",
+        "functions": 2,
+        "avgComplexity": 4,
+        "maxComplexity": 7
+      },
+      {
+        "file": "components\\LoadingSpinner\\LoadingSpinner.tsx",
+        "functions": 1,
+        "avgComplexity": 3,
+        "maxComplexity": 3
+      },
+      {
+        "file": "components\\PriorityBadge\\PriorityBadge.tsx",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "components\\ProjectCard\\ProjectCard.tsx",
+        "functions": 2,
+        "avgComplexity": 1.5,
+        "maxComplexity": 2
+      },
+      {
+        "file": "components\\Sidebar\\Sidebar.tsx",
+        "functions": 6,
+        "avgComplexity": 1.33,
+        "maxComplexity": 2
+      },
+      {
+        "file": "components\\Skeleton\\Skeleton.tsx",
+        "functions": 2,
+        "avgComplexity": 2,
+        "maxComplexity": 3
+      },
+      {
+        "file": "components\\StatusBadge\\StatusBadge.tsx",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "components\\TaskRow\\TaskRow.tsx",
+        "functions": 2,
+        "avgComplexity": 2.5,
+        "maxComplexity": 4
+      },
+      {
+        "file": "pages\\Dashboard\\Dashboard.tsx",
+        "functions": 8,
+        "avgComplexity": 1.5,
+        "maxComplexity": 5
+      },
+      {
+        "file": "pages\\NotFound\\NotFound.tsx",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "pages\\ProjectDetail\\ProjectDetail.tsx",
+        "functions": 21,
+        "avgComplexity": 2.52,
+        "maxComplexity": 21
+      },
+      {
+        "file": "pages\\ProjectsList\\ProjectsList.tsx",
+        "functions": 13,
+        "avgComplexity": 2.77,
+        "maxComplexity": 17
+      },
+      {
+        "file": "pages\\TaskForm\\TaskForm.tsx",
+        "functions": 32,
+        "avgComplexity": 2,
+        "maxComplexity": 15
+      },
+      {
+        "file": "state\\reducer.ts",
+        "functions": 5,
+        "avgComplexity": 7.2,
+        "maxComplexity": 27
+      },
+      {
+        "file": "state\\StoreContext.tsx",
+        "functions": 13,
+        "avgComplexity": 2.31,
+        "maxComplexity": 5
+      },
+      {
+        "file": "utils\\formatDate.ts",
+        "functions": 3,
+        "avgComplexity": 2.33,
+        "maxComplexity": 3
+      },
+      {
+        "file": "utils\\perfMarks.ts",
+        "functions": 2,
+        "avgComplexity": 2.5,
+        "maxComplexity": 3
+      },
+      {
+        "file": "utils\\validateTaskDraft.ts",
+        "functions": 4,
+        "avgComplexity": 3.75,
+        "maxComplexity": 10
+      }
+    ]
+  },
+  {
+    "app": "angular",
+    "functionCount": 233,
+    "avgComplexity": 1.43,
+    "maxComplexity": 10,
+    "perFile": [
+      {
+        "file": "app\\app.spec.ts",
+        "functions": 4,
+        "avgComplexity": 1.25,
+        "maxComplexity": 2
+      },
+      {
+        "file": "app\\app.ts",
+        "functions": 2,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\confirm-dialog\\confirm-dialog.ts",
+        "functions": 11,
+        "avgComplexity": 1.36,
+        "maxComplexity": 3
+      },
+      {
+        "file": "app\\components\\form-input\\form-input.ts",
+        "functions": 8,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\form-select\\form-select.ts",
+        "functions": 7,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\form-textarea\\form-textarea.ts",
+        "functions": 8,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\loading-spinner\\loading-spinner.ts",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\priority-badge\\priority-badge.ts",
+        "functions": 2,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\project-card\\project-card.ts",
+        "functions": 2,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\sidebar\\sidebar.ts",
+        "functions": 2,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\skeleton\\skeleton.ts",
+        "functions": 4,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\status-badge\\status-badge.ts",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\components\\task-row\\task-row.ts",
+        "functions": 3,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\pages\\dashboard\\dashboard.ts",
+        "functions": 13,
+        "avgComplexity": 1.31,
+        "maxComplexity": 2
+      },
+      {
+        "file": "app\\pages\\project-detail\\project-detail.ts",
+        "functions": 36,
+        "avgComplexity": 1.39,
+        "maxComplexity": 5
+      },
+      {
+        "file": "app\\pages\\projects-list\\projects-list.ts",
+        "functions": 12,
+        "avgComplexity": 1.58,
+        "maxComplexity": 3
+      },
+      {
+        "file": "app\\pages\\task-form\\task-form.ts",
+        "functions": 33,
+        "avgComplexity": 1.55,
+        "maxComplexity": 5
+      },
+      {
+        "file": "app\\services\\app-error.service.ts",
+        "functions": 3,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\services\\global-error-handler.ts",
+        "functions": 2,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      },
+      {
+        "file": "app\\services\\mock-api-config.ts",
+        "functions": 7,
+        "avgComplexity": 1.14,
+        "maxComplexity": 2
+      },
+      {
+        "file": "app\\services\\mock-api-errors.ts",
+        "functions": 1,
+        "avgComplexity": 2,
+        "maxComplexity": 2
+      },
+      {
+        "file": "app\\services\\mock-api.service.ts",
+        "functions": 26,
+        "avgComplexity": 1.27,
+        "maxComplexity": 4
+      },
+      {
+        "file": "app\\state\\store.service.ts",
+        "functions": 35,
+        "avgComplexity": 1.71,
+        "maxComplexity": 5
+      },
+      {
+        "file": "app\\utils\\format-date.ts",
+        "functions": 3,
+        "avgComplexity": 2.33,
+        "maxComplexity": 3
+      },
+      {
+        "file": "app\\utils\\perf-marks.ts",
+        "functions": 2,
+        "avgComplexity": 2.5,
+        "maxComplexity": 3
+      },
+      {
+        "file": "app\\utils\\validate-task-draft.ts",
+        "functions": 4,
+        "avgComplexity": 3.75,
+        "maxComplexity": 10
+      },
+      {
+        "file": "main.ts",
+        "functions": 1,
+        "avgComplexity": 1,
+        "maxComplexity": 1
+      }
+    ]
+  }
+]

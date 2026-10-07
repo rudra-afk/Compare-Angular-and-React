@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <svg class="icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path
+      d="M8 18L24 8l16 10v18a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V18Z"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+    <path d="M8 18l16 8 16-8" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+    <path d="M24 26v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </svg>
+  <h3 class="title">{{ title }}</h3>
+  @if (description) {
+    <p class="description">{{ description }}</p>
+  }
+  <div class="action">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-2);
+}
+
+.page-header p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sort-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-right: var(--space-1);
+}
+
+.sort-active {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-600);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.skeleton-card {
+  padding: var(--space-6);
+}

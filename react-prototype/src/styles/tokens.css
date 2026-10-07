@@ -1,0 +1,121 @@
+/* Shared design tokens — identical copy lives in both react-prototype and angular-prototype.
+   Do not edit one without mirroring the change in the other; visual parity is load-bearing
+   for the dissertation's fairness argument. */
+
+:root {
+  /* Brand */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+
+  --gradient-brand: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+  --gradient-brand-soft: linear-gradient(135deg, var(--color-primary-50) 0%, #f5f3ff 100%);
+
+  /* Neutrals */
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #fafafc;
+  --color-border: #e5e7f0;
+  --color-border-strong: #d4d7e6;
+
+  --color-text-primary: #171923;
+  --color-text-secondary: #5c6072;
+  --color-text-muted: #9498ab;
+  --color-text-inverse: #ffffff;
+
+  /* Sidebar / shell */
+  --color-shell-bg: #14152b;
+  --color-shell-bg-soft: #1c1e3a;
+  --color-shell-border: #2a2c4d;
+  --color-shell-text: #c7c9e0;
+  --color-shell-text-active: #ffffff;
+
+  /* Semantic — status */
+  --color-status-todo-bg: #eef0f6;
+  --color-status-todo-text: #545872;
+  --color-status-todo-dot: #8b8fa8;
+
+  --color-status-progress-bg: #fff4e0;
+  --color-status-progress-text: #a15c00;
+  --color-status-progress-dot: #f5a623;
+
+  --color-status-done-bg: #e3faf0;
+  --color-status-done-text: #0f8a56;
+  --color-status-done-dot: #1ec87a;
+
+  /* Semantic — priority */
+  --color-priority-low-bg: #e6f4ff;
+  --color-priority-low-text: #0b6bb8;
+  --color-priority-medium-bg: #fff2e0;
+  --color-priority-medium-text: #b3630a;
+  --color-priority-high-bg: #ffe6ea;
+  --color-priority-high-text: #c81e4e;
+
+  /* Feedback */
+  --color-danger-50: #fdecec;
+  --color-danger-500: #e5484d;
+  --color-danger-600: #cc3a3f;
+  --color-success-500: #1ec87a;
+  --color-warning-500: #f5a623;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(23, 25, 35, 0.05);
+  --shadow-sm: 0 2px 6px rgba(23, 25, 35, 0.06), 0 1px 2px rgba(23, 25, 35, 0.04);
+  --shadow-md: 0 8px 24px rgba(23, 25, 35, 0.08), 0 2px 6px rgba(23, 25, 35, 0.05);
+  --shadow-lg: 0 16px 40px rgba(23, 25, 35, 0.12), 0 4px 12px rgba(23, 25, 35, 0.06);
+  --shadow-glow-primary: 0 8px 24px rgba(99, 102, 241, 0.35);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 0.9375rem;
+  --font-size-md: 1.0625rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+
+  /* Layout */
+  --shell-sidebar-width: 248px;
+  --content-max-width: 1240px;
+}

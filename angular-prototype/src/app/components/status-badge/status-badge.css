@@ -1,0 +1,23 @@
+.todo {
+  background: var(--color-status-todo-bg);
+  color: var(--color-status-todo-text);
+}
+.todo .badge__dot {
+  background: var(--color-status-todo-dot);
+}
+
+.in-progress {
+  background: var(--color-status-progress-bg);
+  color: var(--color-status-progress-text);
+}
+.in-progress .badge__dot {
+  background: var(--color-status-progress-dot);
+}
+
+.done {
+  background: var(--color-status-done-bg);
+  color: var(--color-status-done-text);
+}
+.done .badge__dot {
+  background: var(--color-status-done-dot);
+}

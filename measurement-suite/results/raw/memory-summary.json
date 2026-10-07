@@ -1,0 +1,146 @@
+{
+  "react": {
+    "beforeTaskList": {
+      "runs": [
+        2.06,
+        2.06,
+        2.06
+      ],
+      "n": 3,
+      "mean": 2.06,
+      "stddev": 0,
+      "median": 2.06,
+      "min": 2.06,
+      "max": 2.06,
+      "outliers": []
+    },
+    "afterTaskList": {
+      "runs": [
+        2.87,
+        2.87,
+        2.89
+      ],
+      "n": 3,
+      "mean": 2.88,
+      "stddev": 0.01,
+      "median": 2.87,
+      "min": 2.87,
+      "max": 2.89,
+      "outliers": []
+    },
+    "taskListDelta": {
+      "runs": [
+        0.81,
+        0.81,
+        0.83
+      ],
+      "n": 3,
+      "mean": 0.82,
+      "stddev": 0.01,
+      "median": 0.81,
+      "min": 0.81,
+      "max": 0.83,
+      "outliers": []
+    },
+    "afterInteractions": {
+      "runs": [
+        2.91,
+        2.91,
+        2.94
+      ],
+      "n": 3,
+      "mean": 2.92,
+      "stddev": 0.01,
+      "median": 2.91,
+      "min": 2.91,
+      "max": 2.94,
+      "outliers": []
+    },
+    "interactionsDelta": {
+      "runs": [
+        0.04,
+        0.04,
+        0.05
+      ],
+      "n": 3,
+      "mean": 0.04,
+      "stddev": 0,
+      "median": 0.04,
+      "min": 0.04,
+      "max": 0.05,
+      "outliers": []
+    }
+  },
+  "angular": {
+    "beforeTaskList": {
+      "runs": [
+        3.36,
+        3.36,
+        3.36
+      ],
+      "n": 3,
+      "mean": 3.36,
+      "stddev": 0,
+      "median": 3.36,
+      "min": 3.36,
+      "max": 3.36,
+      "outliers": []
+    },
+    "afterTaskList": {
+      "runs": [
+        4.31,
+        4.31,
+        4.31
+      ],
+      "n": 3,
+      "mean": 4.31,
+      "stddev": 0,
+      "median": 4.31,
+      "min": 4.31,
+      "max": 4.31,
+      "outliers": []
+    },
+    "taskListDelta": {
+      "runs": [
+        0.96,
+        0.95,
+        0.95
+      ],
+      "n": 3,
+      "mean": 0.95,
+      "stddev": 0,
+      "median": 0.95,
+      "min": 0.95,
+      "max": 0.96,
+      "outliers": []
+    },
+    "afterInteractions": {
+      "runs": [
+        4.19,
+        4.19,
+        4.19
+      ],
+      "n": 3,
+      "mean": 4.19,
+      "stddev": 0,
+      "median": 4.19,
+      "min": 4.19,
+      "max": 4.19,
+      "outliers": []
+    },
+    "interactionsDelta": {
+      "runs": [
+        -0.12,
+        -0.12,
+        -0.12
+      ],
+      "n": 3,
+      "mean": -0.12,
+      "stddev": 0,
+      "median": -0.12,
+      "min": -0.12,
+      "max": -0.12,
+      "outliers": []
+    }
+  }
+}

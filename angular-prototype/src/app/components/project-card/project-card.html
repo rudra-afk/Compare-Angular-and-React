@@ -1,0 +1,13 @@
+<a class="card" [routerLink]="['/projects', project.id]" (click)="markNavToDetailStart()">
+  <div class="accent" aria-hidden="true"></div>
+  <div class="body">
+    <div class="header">
+      <h3 class="name">{{ project.name }}</h3>
+      <span class="count">{{ project.taskCount }} {{ project.taskCount === 1 ? 'task' : 'tasks' }}</span>
+    </div>
+    <p class="description">{{ project.description }}</p>
+    <div class="footer">
+      <span>Created {{ formatDate(project.createdAt) }}</span>
+    </div>
+  </div>
+</a>

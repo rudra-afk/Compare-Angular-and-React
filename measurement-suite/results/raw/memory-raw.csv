@@ -1,0 +1,7 @@
+app,run,beforeTaskListMB,afterTaskListMB,taskListDeltaMB,afterInteractionsMB,interactionsDeltaMB
+react,1,2.06,2.87,0.81,2.91,0.04
+react,2,2.06,2.87,0.81,2.91,0.04
+react,3,2.06,2.89,0.83,2.94,0.05
+angular,1,3.36,4.31,0.96,4.19,-0.12
+angular,2,3.36,4.31,0.95,4.19,-0.12
+angular,3,3.36,4.31,0.95,4.19,-0.12

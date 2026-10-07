@@ -1,0 +1,76 @@
+{
+  "react": [
+    {
+      "run": 1,
+      "navToDetail": 343.7,
+      "sort": 12.6,
+      "filter": 4.5,
+      "navToList": 12.5
+    },
+    {
+      "run": 2,
+      "navToDetail": 329.4,
+      "sort": 12.7,
+      "filter": 5.8,
+      "navToList": 12.2
+    },
+    {
+      "run": 3,
+      "navToDetail": 344.5,
+      "sort": 12.2,
+      "filter": 4.4,
+      "navToList": 12.3
+    },
+    {
+      "run": 4,
+      "navToDetail": 340,
+      "sort": 12.7,
+      "filter": 3.2,
+      "navToList": 12.3
+    },
+    {
+      "run": 5,
+      "navToDetail": 310.6,
+      "sort": 12.9,
+      "filter": 4.3,
+      "navToList": 12.5
+    }
+  ],
+  "angular": [
+    {
+      "run": 1,
+      "navToDetail": 350.8,
+      "sort": 12.5,
+      "filter": 4.9,
+      "navToList": 12.1
+    },
+    {
+      "run": 2,
+      "navToDetail": 337.9,
+      "sort": 12.7,
+      "filter": 6.9,
+      "navToList": 12.2
+    },
+    {
+      "run": 3,
+      "navToDetail": 391.8,
+      "sort": 13.3,
+      "filter": 6.7,
+      "navToList": 12
+    },
+    {
+      "run": 4,
+      "navToDetail": 346.1,
+      "sort": 14.8,
+      "filter": 5,
+      "navToList": 11
+    },
+    {
+      "run": 5,
+      "navToDetail": 397.6,
+      "sort": 13.1,
+      "filter": 5.3,
+      "navToList": 12.3
+    }
+  ]
+}

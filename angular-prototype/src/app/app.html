@@ -1,0 +1,17 @@
+@if (appError.hasFatalError()) {
+  <div class="error-wrapper">
+    <div class="error-card">
+      <h1 class="error-title">Something went wrong</h1>
+      <p class="error-message">
+        An unexpected error occurred while rendering this page. You can try again, or head back
+        to the dashboard.
+      </p>
+      <div class="error-actions">
+        <button type="button" class="btn btn-primary" (click)="resetError()">Try again</button>
+        <a href="/" class="btn btn-secondary">Back to dashboard</a>
+      </div>
+    </div>
+  </div>
+} @else {
+  <router-outlet></router-outlet>
+}

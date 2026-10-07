@@ -1,0 +1,117 @@
+@if (store.currentProjectNotFound()) {
+  <app-empty-state
+    title="Project not found"
+    description="This project may have been deleted, or the link is incorrect."
+  >
+    <a routerLink="/projects" class="btn btn-primary">Back to projects</a>
+  </app-empty-state>
+} @else if (store.currentProjectError() && !store.currentProject()) {
+  <app-empty-state
+    title="Couldn't load this project"
+    [description]="store.currentProjectError() ?? undefined"
+  >
+    <button type="button" class="btn btn-primary" (click)="retryProject()">Retry</button>
+  </app-empty-state>
+} @else if (!store.currentProject()) {
+  <div class="loading-wrap">
+    <app-loading-spinner
+      size="lg"
+      [label]="store.currentProjectLoading() ? 'Loading project…' : undefined"
+    />
+  </div>
+} @else {
+  <div class="page">
+    <header class="header">
+      <div>
+        <a routerLink="/projects" class="back-link" (click)="markNavToListStart()">← All projects</a>
+        <h1>{{ store.currentProject()!.name }}</h1>
+        <p class="description">{{ store.currentProject()!.description }}</p>
+        <p class="meta">
+          Created {{ formatDate(store.currentProject()!.createdAt) }} ·
+          {{ store.currentProject()!.taskCount }} tasks
+        </p>
+      </div>
+      <a [routerLink]="['/projects', projectId, 'tasks', 'new']" class="btn btn-primary">
+        + Add Task
+      </a>
+    </header>
+
+    <div class="toolbar">
+      <app-form-select
+        inputId="status-filter"
+        label="Status"
+        [value]="statusFilter()"
+        (valueChange)="setStatusFilter($event)"
+        [options]="statusOptions"
+      />
+      <app-form-select
+        inputId="priority-filter"
+        label="Priority"
+        [value]="priorityFilter()"
+        (valueChange)="setPriorityFilter($event)"
+        [options]="priorityOptions"
+      />
+      <app-form-select
+        inputId="due-sort"
+        label="Due date"
+        [value]="dueSort()"
+        (valueChange)="setDueSort($event)"
+        [options]="dueSortOptions"
+      />
+    </div>
+
+    @if (store.tasksError() && !store.currentProjectTasks()) {
+      <app-empty-state title="Couldn't load tasks" [description]="store.tasksError() ?? undefined">
+        <button type="button" class="btn btn-primary" (click)="retryTasks()">Retry</button>
+      </app-empty-state>
+    }
+
+    @if (!store.currentProjectTasks() && store.tasksLoading()) {
+      <div class="card">
+        <app-skeleton [rows]="6" [rowHeight]="48" />
+      </div>
+    }
+
+    @if (store.currentProjectTasks() && store.currentProjectTasks()!.length === 0) {
+      <app-empty-state
+        title="No tasks yet"
+        description="Add the first task to get this project moving."
+      />
+    }
+
+    @if (
+      store.currentProjectTasks() &&
+      store.currentProjectTasks()!.length > 0 &&
+      filteredTasks.length === 0
+    ) {
+      <app-empty-state
+        title="No matching tasks"
+        description="Try adjusting the status or priority filters."
+      />
+    }
+
+    @if (filteredTasks.length > 0) {
+      <div class="card">
+        @for (task of filteredTasks; track task.id) {
+          <app-task-row [task]="task" [projectId]="projectId" (delete)="requestDelete($event)" />
+        }
+      </div>
+    }
+
+    <app-confirm-dialog
+      [open]="!!taskPendingDelete()"
+      title="Delete task"
+      [message]="
+        'Are you sure you want to delete \'' +
+        (taskPendingDelete()?.title ?? '') +
+        '\'? This cannot be undone.'
+      "
+      confirmLabel="Delete"
+      variant="danger"
+      [loading]="store.taskDeletion().status === 'deleting'"
+      [errorMessage]="deletionError"
+      (confirm)="confirmDelete()"
+      (cancel)="cancelDelete()"
+    />
+  </div>
+}
